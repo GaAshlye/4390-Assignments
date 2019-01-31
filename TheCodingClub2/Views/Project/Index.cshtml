@@ -1,0 +1,58 @@
+@model IEnumerable<TheCodingClub2.Projects>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout ="_FormLayout";
+}
+
+<div class="col-md-4 container background text-center">
+<h1>Projects</h1>
+</div>
+
+<div class=" container background">
+<p>
+    <a asp-action="Create">Create Project</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Project Name
+            </th>
+            <th>
+                Due Date
+            </th>
+            <th>
+                Company Name
+            </th>
+            <th>
+                Team Lead
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.compname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamLead)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ProjectID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ProjectID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ProjectID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

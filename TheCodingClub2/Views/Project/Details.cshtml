@@ -1,0 +1,45 @@
+@model TheCodingClub2.Projects
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_FormLayout";
+}
+
+<div class = " text-center container background">
+<h1>Details</h1>
+</div>
+
+<div class="container background col-md-4">
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            Project Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.PName)
+        </dd>
+        <dt class = "col-sm-4">
+            Due Date
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.dd)
+        </dd>
+        <dt class = "col-sm-4">
+            Company Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.compname)
+        </dd>
+        <dt class = "col-sm-4">
+            Team Lead
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.teamLead)
+        </dd>
+    </dl>
+</div>
+<div class="container background col-md-4">
+    <a asp-action="Edit" asp-route-id="@Model.ProjectID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

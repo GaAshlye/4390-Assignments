@@ -1,0 +1,50 @@
+@model TheCodingClub2.User
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_FormLayout";
+}
+<div class="col-md-4 container background text-center">
+<h1>Edit User</h1></div>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4 container background">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="UserID" />
+            <div class="form-group">
+                <label asp-for="fName" class="control-label">First Name</label>
+                <input asp-for="fName" class="form-control" />
+                <span asp-validation-for="fName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="lName" class="control-label">Last Name</label>
+                <input asp-for="lName" class="form-control" />
+                <span asp-validation-for="lName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="userName" class="control-label">User Name</label>
+                <input asp-for="userName" class="form-control" />
+                <span asp-validation-for="userName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="passWord" class="control-label">Password</label>
+                <input asp-for="passWord" class="form-control" />
+                <span asp-validation-for="passWord" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

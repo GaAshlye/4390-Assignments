@@ -1,0 +1,49 @@
+@model TheCodingClub2.Projects
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_FormLayout";
+}
+
+<div class="col-md-4 container background text-center">
+<h1>Edit Project</h1></div>
+<hr />
+<div class="row">
+    <div class="col-md-4 container background">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ProjectID" />
+            <div class="form-group">
+                <label asp-for="PName" class="control-label">Project Name</label>
+                <input asp-for="PName" class="form-control" />
+                <span asp-validation-for="PName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="dd" class="control-label">Due Date</label>
+                <input asp-for="dd" class="form-control" />
+                <span asp-validation-for="dd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="compname" class="control-label">Company Name</label>
+                <input asp-for="compname" class="form-control" />
+                <span asp-validation-for="compname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="teamLead" class="control-label">Team Lead</label>
+                <input asp-for="teamLead" class="form-control" />
+                <span asp-validation-for="teamLead" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

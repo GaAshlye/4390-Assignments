@@ -1,0 +1,43 @@
+@model TheCodingClub2.User
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "_FormLayout";
+}
+<div class = " text-center container background">
+<h1>Details</h1>
+</div>
+<div class="container background col-md-4">
+   
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+           First Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.fName)
+        </dd>
+        <dt class = "col-sm-4">
+            Last Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.lName)
+        </dd>
+        <dt class = "col-sm-4">
+            User Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+        <dt class = "col-sm-4">
+            Password
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.passWord)
+        </dd>
+    </dl>
+</div>
+<div class ="container background col-md-4">
+    <a asp-action="Edit" asp-route-id="@Model.UserID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

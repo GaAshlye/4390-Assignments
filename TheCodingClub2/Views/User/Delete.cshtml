@@ -1,0 +1,48 @@
+@model TheCodingClub2.User
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "_FormLayout";
+}
+<div class="col-md-4 container background text-center">
+<h1>Delete</h1>
+</div>
+<div class="col-md-4 container background text-center">
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            First Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.fName)
+        </dd>
+        <dt class = "col-sm-4">
+            Last Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.lName)
+        </dd>
+        <dt class = "col-sm-4">
+            User Name
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.userName)
+        </dd>
+        <dt class = "col-sm-4">
+            Password
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.passWord)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="UserID" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+</div>
