@@ -13285,7 +13285,7 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.EntityFrameworkCore.SQLite >= 2.2.1",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.1"
     ]
   },
   "packageFolders": {
@@ -13352,7 +13352,7 @@
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
-            "version": "(, )"
+            "version": "[2.2.1, )"
           }
         },
         "imports": [
