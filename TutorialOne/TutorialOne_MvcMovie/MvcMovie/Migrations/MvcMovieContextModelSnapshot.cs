@@ -26,6 +26,8 @@ namespace MvcMovie.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18, 2)");
 
+                    b.Property<string>("Rating");
+
                     b.Property<DateTime>("ReleaseDate");
 
                     b.Property<string>("Title");
